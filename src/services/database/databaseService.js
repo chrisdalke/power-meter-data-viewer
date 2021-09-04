@@ -1,23 +1,37 @@
 import PouchDB from 'pouchdb';
+import { v4 as uuid } from 'uuid';
 
 const batteries = new PouchDB('batteries');
-PouchDB.debug.enable('*');
 
-const getBatteries = () => {
-
+const getBatteries = async () => {
+    const rawDocs = await batteries.allDocs({
+        include_docs: true
+    });
+    return rawDocs.rows;
 };
 
 const getBattery = (id) => {
 
 };
 
-const createBattery = () => {
-
+const createBattery = async (body) => {
+    const newBattery = await batteries.put({
+        _id: uuid(),
+        ...body
+    })
+    return newBattery;
 };
 
-const deleteBattery = () => {
-
+const deleteBattery = async (doc) => {
+    return batteries.remove(doc);
 };
+
+const deleteAllBatteries = async () => {
+    const rows = await getBatteries();
+    await Promise.all(rows.map(({ doc }) => {
+        return batteries.remove(doc);
+    }));
+}
 
 const updateBattery = () => {
 
@@ -28,5 +42,6 @@ export default {
     getBattery,
     createBattery,
     deleteBattery,
-    updateBattery
+    updateBattery,
+    deleteAllBatteries
 };
