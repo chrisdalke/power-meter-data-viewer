@@ -1201,6 +1201,14 @@
   "resolved" "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   "version" "0.2.3"
 
+"@blueprintjs/icons@^3.30.2":
+  "integrity" "sha512-t0coke9JWLtAt4eQuGfTD2KQSjD+Q5V9JLnRwt1sEyV9/CHXgeoTvsEEqpiXe6gWOW72Rok6Uo86yLyICRW7wQ=="
+  "resolved" "https://registry.npmjs.org/@blueprintjs/icons/-/icons-3.30.2.tgz"
+  "version" "3.30.2"
+  dependencies:
+    "classnames" "^2.2"
+    "tslib" "~1.13.0"
+
 "@chakra-ui/accordion@1.3.6":
   "integrity" "sha512-zZCk11FIbUgpFwwOzyhoLM9UkBhX8hIVHI/L0CSEzdVfQTra2gMf+Lw0YQVayHlO/7J6djTSzbA7nZQl50dIag=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/accordion/-/accordion-1.3.6.tgz"
@@ -4202,6 +4210,11 @@
     "define-property" "^0.2.5"
     "isobject" "^3.0.0"
     "static-extend" "^0.1.1"
+
+"classnames@^2.2":
+  "integrity" "sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA=="
+  "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
+  "version" "2.3.1"
 
 "clean-css@^4.2.3":
   "integrity" "sha512-VcMWDN54ZN/DS+g58HYL5/n4Zrqe8vHJpGA8KdgUXFU4fuP/aHNw8eld9SyEIyabIMJX/0RaY/fplOo5hYLSFA=="
@@ -13029,6 +13042,11 @@
   "integrity" "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
+
+"tslib@~1.13.0":
+  "integrity" "sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q=="
+  "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.13.0.tgz"
+  "version" "1.13.0"
 
 "tsutils@^3.17.1", "tsutils@^3.21.0":
   "integrity" "sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA=="

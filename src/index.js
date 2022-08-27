@@ -4,7 +4,10 @@ import './assets/css/index.css';
 import { Button, ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import ListScreen from './components/screens/ListScreen';
+import BatteryScreen from './components/screens/BatteryScreen';
+import SettingsScreen from './components/screens/SettingsScreen';
 import databaseService from './services/database/databaseService';
+import { BrowserRouter, HashRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 window.db = databaseService;
 
@@ -18,13 +21,29 @@ const theme = extendTheme({
   }
 });
 
+// Selectively choose router based on whether we are using cordova or the web app
+const Router = window.cordova ? HashRouter : BrowserRouter;
+
 const renderReactDom = () => {
   ReactDOM.render(
-    <React.StrictMode>
+    <Router>
       <ChakraProvider theme={theme}>
-        <ListScreen />
+        <Switch>
+          <Route path="/battery/:id">
+            <ListScreen />
+          </Route>
+          <Route path="/settings">
+            <ListScreen />
+          </Route>
+          <Route path="/" exact>
+            <ListScreen />
+          </Route>
+          <Route>
+            <Redirect to="/" />
+          </Route>
+        </Switch>
       </ChakraProvider>
-    </React.StrictMode>,
+    </Router>,
     document.getElementById('root')
   );
 }
